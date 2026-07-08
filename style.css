@@ -1,0 +1,176 @@
+* { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4d04e;
+    font-family: 'Outfit', sans-serif;
+    padding: 24px;
+    overflow: hidden; 
+    position: relative;
+}
+
+.blog-card {
+    background-color: #ffffff;
+    max-width: 384px;
+    width: 100%;
+    border: 1px solid #111111;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: 8px 8px 0px #111111;
+    position: relative;
+    z-index: 10; 
+}
+
+.cover-img { 
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.badge { 
+    background-color: #f4d04e;
+    color: #111111;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.publish-date { 
+    color: #111111;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-title {
+    margin: 0;
+}
+
+.title-link{
+    color: #111111;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* --- HOVER COM MOVIMENTO E COR --- */
+.card-title a:hover,
+.title-link:hover {
+    color: #f4d04e;
+    transform: translateY(-2px);
+}
+
+.card-description { 
+    color: #7f7f7f;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.card-author { 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.author-name {
+    color: #111111;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+
+/* ESTRUTURA DA MATRIZ DE PONTOS (ESCADA)*/
+.dot-matrix {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(5, 8px);
+  grid-template-rows: repeat(5, 8px);
+  gap: 40px; 
+  z-index: 1;
+}
+
+.top-right {
+  top: 40px;
+  right: 40px;
+}
+
+.bottom-left {
+  bottom: 40px;
+  left: 40px;
+}
+
+.dot-matrix i {
+  width: 8px;
+  height: 8px;
+  background-color: #111111;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Mapeamento das posições para o efeito cascata */
+.top-right i:nth-child(1)  { grid-area: 1 / 1; }
+.top-right i:nth-child(2)  { grid-area: 1 / 2; }
+.top-right i:nth-child(3)  { grid-area: 1 / 3; }
+.top-right i:nth-child(4)  { grid-area: 1 / 4; }
+.top-right i:nth-child(5)  { grid-area: 1 / 5; }
+
+.top-right i:nth-child(6)  { grid-area: 2 / 2; }
+.top-right i:nth-child(7)  { grid-area: 2 / 3; }
+.top-right i:nth-child(8)  { grid-area: 2 / 4; }
+.top-right i:nth-child(9)  { grid-area: 2 / 5; }
+
+.top-right i:nth-child(10) { grid-area: 3 / 3; }
+.top-right i:nth-child(11) { grid-area: 3 / 4; }
+.top-right i:nth-child(12) { grid-area: 3 / 5; }
+
+.top-right i:nth-child(13) { grid-area: 4 / 4; }
+.top-right i:nth-child(14) { grid-area: 4 / 5; }
+
+.top-right i:nth-child(15) { grid-area: 5 / 5; }
+
+.bottom-left i:nth-child(1)  { grid-area: 1 / 1; }
+
+.bottom-left i:nth-child(2)  { grid-area: 2 / 1; }
+.bottom-left i:nth-child(3)  { grid-area: 2 / 2; }
+
+.bottom-left i:nth-child(4)  { grid-area: 3 / 1; }
+.bottom-left i:nth-child(5)  { grid-area: 3 / 2; }
+.bottom-left i:nth-child(6)  { grid-area: 3 / 3; }
+
+.bottom-left i:nth-child(7)  { grid-area: 4 / 1; }
+.bottom-left i:nth-child(8)  { grid-area: 4 / 2; }
+.bottom-left i:nth-child(9)  { grid-area: 4 / 3; }
+.bottom-left i:nth-child(10) { grid-area: 4 / 4; }
+
+.bottom-left i:nth-child(11) { grid-area: 5 / 1; }
+.bottom-left i:nth-child(12) { grid-area: 5 / 2; }
+.bottom-left i:nth-child(13) { grid-area: 5 / 3; }
+.bottom-left i:nth-child(14) { grid-area: 5 / 4; }
+.bottom-left i:nth-child(15) { grid-area: 5 / 5; }
